@@ -6,3 +6,47 @@
     flex-wrap: wrap;
     gap: 10px;
 }
+
+@keyframes spin{
+    0%{
+        transform: rotate(0deg);
+        opacity: 0%;
+
+    }
+    100%{
+        transform: rotate(360deg);
+        opacity: 100%;
+    }
+}
+
+img{
+    animation: spin 2s linear;
+    
+
+}
+
+@keyframes move{
+    0%{
+        transform: translateX(0px);
+    }
+    33%{
+        transform: translateX(50px);
+    }
+    66%{
+        transform: translateX(-50px) translateY(-50px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+
+#bear:active{
+    animation: move 2s;
+}
+@keyframes disapper{
+    0%{
+        #elephant:active{
+            opacity: 0%;
+        }
+    }
+}
