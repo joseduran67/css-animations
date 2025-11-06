@@ -45,8 +45,36 @@ img{
 }
 @keyframes disapper{
     0%{
-        #elephant:active{
-            opacity: 0%;
-        }
+        transform: scale(100%);
+        opacity: 100%;
     }
+    100%{
+        transform: scale(10%);
+        opacity: 0%;
+    }
+}
+
+#elephant:active{
+    animation: disappear 2s;
+
+}
+
+@keyframes dance{
+    0%{
+        transform: rotate(0);
+    
+    }
+    33%{
+        transform: rotate(15deg) translateY(10deg);
+    }
+    66%{
+        transform: rotate(-15deg);
+    
+    }
+    100%{
+        transform: rotate(0);
+    }
+}
+#giraffe:active{
+    animation: dance 2s;
 }
